@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./style-1.css"/>
+    <style>
+        .back {
+            display: flex;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            gap: 7px;
+        }
+
+        .back a {
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="display">
+        <div class="head">
+            <h2>Tampere</h2>
+            <p id="current-time"></p>
+        </div>
+        
+        <div id="current">
+            <p class="fl" id="current-temp"></p>
+            <img class="fl" id="current-icon">
+            <div class="fl-info">
+                <p>Humidity: </p>
+                <p>Air pressure: </p>
+                <p>Cloud coverage: </p>
+                <p>Wind speed: </p>
+            </div>
+            <div class="fl-num">
+                <p id="rel-humid"></p>
+                <p id="air-pres"></p>
+                <p id="cloud-cov"></p>
+                <p id="wind-speed"></p>
+            </div>
+        </div>
+        <div id="next">
+            <div class="n">
+                <p id="1h-t"></p>
+                <img id="1h-img" width="50px">
+                <p id="1h-temp"></p>
+            </div>
+            <div class="n">
+                <p id="2h-t"></p>
+                <img id="2h-img" width="50px">
+                <p id="2h-temp"></p>
+            </div>
+            <div class="n">
+                <p id="3h-t"></p>
+                <img id="3h-img" width="50px">
+                <p id="3h-temp"></p>
+            </div>           
+        </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>

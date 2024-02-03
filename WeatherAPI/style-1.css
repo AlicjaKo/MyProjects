@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('e.jpeg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+}
+
+#display {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 246, 255);
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.3);
+}
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+#current-time {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#current {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    gap: 5px;
+
+}
+#current-temp {
+    margin-left: 35px;
+    font-size: 50px;
+   
+}
+#current .fl {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#current .fl-info {
+    flex-grow: 1;
+    font-size: 16px;
+    text-align: left;
+    line-height: 8px;
+    margin-left: 35px;
+}
+
+#current .fl-num {
+    font-size: 16px;
+    text-align: left;
+    line-height: 8px;
+    margin-right: 35px;
+}
+
+#current-icon {
+    width: 200px;
+    flex-grow: 2;
+    margin-left: 35px;
+}
+
+#next {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 80%;
+    align-self: center;
+}
+
+#next .n {
+    background-color: rgb(217, 229, 241);
+    border-radius: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    align-self: center;
+    font-size: 20px;
+    width: 400px;
+    box-shadow: 10px 2px 8px rgb(0, 0, 0, 0.3);
+}
+
