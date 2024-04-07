@@ -1,4 +1,4 @@
-## Alicja Kosak Project Page
+# Alicja Kosak Project Page
 
 In this repository there are uploaded projects developed by Alicja Kosak.
 
