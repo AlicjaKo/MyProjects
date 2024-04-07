@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/spacetype?styles=144571" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/novelide@1.0.0/dist/novelide.min.js"></script>
+
+</head>
+<body>
+    <div class="body">
+
+
+        <div class="title">
+            <h1>Countdown</h1>
+            <div class="enter-date">
+                <h4>Enter a date:&nbsp;</h4>
+                <input type="datetime-local" id="when" value="2025-07-15 12:00">
+            </div>
+            <button id="start">save</button>
+            <h4 id="error"></h4>
+        </div>
+
+
+
+        <div class="clock-flex">
+            <div class="clock">
+                <p id="day">1</p>
+                <h5>Days</h5>
+            </div>
+            <div class="clock">
+                <p id="hour">23</p>
+                <h5>Hours</h5>
+            </div>
+            <div class="clock">
+                <p id="minute">59</p>
+                <h5>Minutes</h5>
+            </div>
+            <div class="clock">
+                <p id="second">54</p>
+                <h5>Seconds</h5>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.17/dayjs.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body {
+    font-family: 'SpaceType', sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-image:url('gif.gif');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    color: rgb(255, 135, 239);
+}
+
+.enter-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+    justify-self: center;
+}
+
+.body {
+    background-color: rgb(8, 35, 59, 0.8);
+    padding: 1rem;
+    min-width: 40rem;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    color: rgb(255, 207, 249);
+    font-size: 5.5rem;
+    text-shadow:0 0 8px rgb(253, 110, 234);
+    margin: 0;
+    margin-top: 2rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+
+.clock-flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock p{
+   color: rgb(188, 255, 255);
+   text-shadow:0 0 8px rgb(133, 255, 255);
+   font-size: 5.5rem;
+   margin: 0;
+   text-align: center;
+}
+
+.clock {
+    background-color: rgb(8, 35, 59, 1);
+    padding: 0.7rem;
+}
+
+h5 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+input, button {
+    background-color: transparent;
+    font-family: 'SpaceType', sans-serif;
+    color: rgb(255, 135, 239);
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+}
+
+button:hover, input:focus, input:hover {
+    color: rgb(188, 255, 255);
+}
+
+@media (max-width: 750px) {
+    .clock-flex {
+        flex-direction: column;
+    }
+    h1, .clock p{
+        font-size: 4rem;
+    }
+    h4, input, button {
+        font-size: 1rem;
+    }
+}
