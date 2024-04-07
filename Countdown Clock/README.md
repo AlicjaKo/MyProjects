@@ -1,9 +1,9 @@
 ## Purpose
-The program was created to practice web development tools, and to make an interactive simple game.
+This program was made to test the time functons and mathematichs in Java Script. Also it is a user friendly design.
 
 
 ## Functionalities
-Objects appears in random place on the screen, and it measures the time until its cliked. It also saves the best time, and restarts data after refreshing the page.
+The program counts down the time. User may put any date, but the program doesn't do the countdow when the event has already occured. When user refreshes the page, the event is saved. User cannot put an empty date. In the backround there is a gif which makes the experience more interactive.
 
 
 ## Used tools
