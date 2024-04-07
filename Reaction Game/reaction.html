@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactionGame</title>
+    <link rel="stylesheet" href="./ch4.css"/>
+    <style>
+        .back {
+            display: flex;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            gap: 7px;
+        }
+
+        .back a {
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <a href="../projects.html"><img src="../img/arrow.png" alt="arrow" width="30px"></a>
+    </div>
+    <div class="box">
+        <h1>Reaction Game</h1>
+        <p>Click the shape as fast as you can!</p>
+        <p>Press the button to start</p>
+        <br>
+        <button id="start">Start game</button>
+        <br>
+    </div> 
+
+    <script type="text/javascript">
+        document.getElementById("start").onclick = () => {
+            window.location.href = './ch4.html';
+        }
+    </script>
+
+</body>
+</html>
