@@ -14,7 +14,3 @@ In this repository there are uploaded projects developed by Alicja Kosak.
 6. Finger Count Game - Test your intuition in this quick game!
 7. Reaction Game - Experience a dynamic game designed to put your reflexes to the test.
 
-
-
-## Contact
-Email: alicja@kosak.tech
