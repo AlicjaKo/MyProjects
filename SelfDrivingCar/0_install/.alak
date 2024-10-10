@@ -1,0 +1,6 @@
+export WEBOTS_HOME=/Applications/Webots.app
+export WEBOTS_PYTHON=$WEBOTS_HOME/lib/controller/python
+export PYTHONPATH=${PYTHONPATH:+${PYTHONPATH}:}$WEBOTS_PYTHON
+export PYTHONIOENCODING=UTF-8
+export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}$WEBOTS_HOME/lib/controller
+
