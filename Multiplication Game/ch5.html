@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .equation {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(191, 210, 255);
+            border-radius: 15px;
+            padding: 40px;
+        }
+        input {
+            width: 20%;
+        }
+        
+        .back {
+            display: flex;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            gap: 7px;
+        }
+
+        .back a {
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a href="../projects.html"><img src="../img/arrow.png" alt="arrow" width="30px"></a>
+    </div>
+    
+    <div class="box">
+        <h2>Multiplication game</h2>
+
+        <div class="equation">
+            <p id="one"></p>
+            <input id="my-input1"/>
+            <p id="answer1"></p>
+        </div>
+
+        <div class="equation">
+            <p id="two"></p>
+            <input id="my-input2"/>
+            <p id="answer2"></p>
+        </div>
+
+        <div class="equation">
+            <p id="three"></p>
+            <input id="my-input3"/>
+            <p id="answer3"></p>
+        </div>
+        <div> 
+            <button id="check-btn">Check</button>
+            <button id="reset-btn">Reset</button>
+            <button id="show-btn">Show</button>
+        </div>
+        <br>
+        <div id="count"></div>
+    </div>
+
+    <script>
+
+            let a = Math.floor(Math.random() * 10);
+            let b = Math.floor(Math.random() * 10);
+
+            let d = Math.floor(Math.random() * 10);
+            let e = Math.floor(Math.random() * 10);
+
+            let g = Math.floor(Math.random() * 10);
+            let h = Math.floor(Math.random() * 10);
+
+            let correctCount = 0;
+
+            document.getElementById("one").innerText = `${a} X ${b} = `;
+            document.getElementById("two").innerText = `${d} X ${e} = `;
+            document.getElementById("three").innerText = `${g} X ${h} = `;
+
+            document.getElementById("check-btn").onclick = () => {
+                let c = parseInt(document.getElementById("my-input1").value);
+                let f = parseInt(document.getElementById("my-input2").value);
+                let i = parseInt(document.getElementById("my-input3").value);
+                
+                if (a*b===c) {
+                    document.getElementById("answer1").innerText = "✅";
+                    correctCount++;
+                }
+                else {
+                    document.getElementById("answer1").innerText = "❌";
+                }
+
+                if (d*e===f) {
+                    document.getElementById("answer2").innerText = "✅";
+                    correctCount++;
+                }
+                else {
+                    document.getElementById("answer2").innerText = "❌";
+                }
+
+                if (g*h===i) {
+                    document.getElementById("answer3").innerText = "✅";
+                    correctCount++;
+                }
+                else {
+                    document.getElementById("answer3").innerText = "❌";
+                }
+
+                document.getElementById("count").innerText = `Your score is ${correctCount}/3`;
+                if (correctCount==3) {
+                    document.getElementById("count").style.color = "green";
+                }
+            }
+
+            document.getElementById("reset-btn").onclick = () => {
+
+                document.getElementById("my-input1").value = '';
+                document.getElementById("my-input2").value = '';
+                document.getElementById("my-input3").value = '';
+        
+                document.getElementById("answer1").innerText = '';
+                document.getElementById("answer2").innerText = '';
+                document.getElementById("answer3").innerText = '';
+
+                correctCount = 0;
+
+                location.reload();
+            }
+
+            document.getElementById("show-btn").onclick = () => { 
+                document.getElementById("answer1").innerText = `${a*b}`;
+                document.getElementById("answer2").innerText = `${d*e}`;
+                document.getElementById("answer3").innerText = `${g*h}`;
+            }
+
+    </script>
+</body>
+</html>

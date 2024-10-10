@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactionGame</title>
+    <link rel="stylesheet" href="./ch4.css"/>
+</head>
+
+<body>
+    <div class="back">
+        <a href="../projects.html"><img src="../img/arrow.png" alt="arrow" width="30px"></a>
+    </div>
+    <div class="playboard">
+        <div class="text">
+            <h1>Reaction Game</h1>
+            <div>
+                <p>Your time: <span id="time" class="bold"></span></p>
+                <p id="best-time"></p>
+            </div>
+        </div>
+            <div id="shape"></div>
+    </div>
+
+    <script type="text/javascript">
+        let startTime = new Date().getTime();
+        const shapeEl = document.getElementById("shape");
+        const colors = ["red", "green", "blue", "violet", "purple"];
+
+        const resetGame = () => {
+            const top = Math.random() * 500;
+            const left = Math.random() * 1000;
+            const size =  (Math.random() * 200) + 20;
+
+            shapeEl.style.top = top + "px";
+            shapeEl.style.left = left + "px";
+            shapeEl.style.width = size + "px";
+            shapeEl.style.height = size + "px";
+
+            if (Math.random()> 0.5) {
+                shapeEl.style.borderRadius = "50%";
+            }
+            else {
+                shapeEl.style.borderRadius = "0%";
+            }
+
+            const index = Math.floor(Math.random() * 5);
+            shapeEl.style.backgroundColor = colors[index];
+
+
+            shapeEl.style.display = "block";
+            startTime = new Date().getTime();
+        }
+
+        const triggerResetTimer = () => {
+            setTimeout(resetGame, 1 * 1000);
+        }
+
+        const bestTimeKey = "reactionGameBestTime";
+
+        const saveBestTime = (time) => {
+            const bestTime = parseFloat(localStorage.getItem(bestTimeKey)) || Infinity;
+            if (time < bestTime) {
+                localStorage.setItem(bestTimeKey, time);
+            }
+        };
+
+        const displayBestTime = () => {
+            const bestTime = parseFloat(localStorage.getItem(bestTimeKey));
+            if (bestTime && bestTime !== Infinity) {
+                const bestTimeElement = document.getElementById("best-time");
+                bestTimeElement.innerHTML = `Best Time: <span class="bold">${bestTime}s</span>`;
+            }
+        };
+
+        window.onload = () => {
+            localStorage.removeItem(bestTimeKey);
+            displayBestTime();
+        };
+
+        shapeEl.onclick = () => {
+            shapeEl.style.display = "none";
+            const endTime = new Date().getTime();
+            const time = (endTime-startTime) / 1000
+            document.getElementById("time").innerText = time + "s";
+            saveBestTime(time);
+            displayBestTime(); 
+            triggerResetTimer();
+        }
+
+  
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+.buttons {
+    display: flex;
+    width: 90%;
+    gap: 0.5rem;
+}
+.b {
+    flex-grow: 1;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    gap: 3rem;
+}
+
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    padding-top: 4rem !important;
+}
+
+.carousel-item {
+    height: 20rem;
+}
+
+.my-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+
+}
+
+td,tr {
+    text-align: center;
+    width: 33.33%;
+}
+
+#carouselExampleAutoplaying h2 {
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Horizontal offset, Vertical offset, Blur radius, Color */
+}
+
+#carouselExampleAutoplaying h1 {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Horizontal offset, Vertical offset, Blur radius, Color */
+}
+
+.info {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.headings {
+    text-align: center;
+}
+
+.headings h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.headings h2{
+    margin-bottom: 0;
+}
+
+.jus{
+    text-align: center;
+}
+
+.square-cell {
+    text-align: center;
+    width: 8rem; 
+    height: 8rem; 
+    background-color: #a8d9ff;
+    border: 1px solid #3baaff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.btn.dropdown-item, .btn.dropdown-toggle, .btn.b {
+    font-size: 1.25rem; 
+}
+
+.white h5{
+    color: rgb(188, 188, 188);
+    margin-bottom: 0;
+}
+
+.white a {
+text-decoration: none;
+}
+.white h5:hover {
+    color: rgb(214, 214, 214);
+    text-decoration:underline;
+}
+
+.text-as-h5 {
+    font-size: 1.25rem; 
+  }
