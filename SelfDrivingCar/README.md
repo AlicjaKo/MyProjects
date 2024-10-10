@@ -1,20 +1,31 @@
-# Computer Vision Section
-This section an algorithm for following the road will be created.
+# Self-Driving Cars Course Repository
 
-# TODO:
-- Go to the code for this section, if you don't have it follow the installation lecture or go to the github repository, the path is: "Self-Driving-Cars-Course/2_computer_vision"
-- Run the file "1_image_threshold.py", I recommend to use the Python debugger to understand how the thresholding operation works
-- Open Webots by double clicking the file "Self-Driving-Cars/words/city.wbt"
-- Run the code the file "2_camera_pid.py" as it is to ensure that everything works and make sure that you understand the logic behind it
-- Go to the file "2_computer_vision/utils.py"
-- Remove the content of function "calculate_normalized_average_col" by leaving it as:
-```
-def calculate_normalized_average_col(binary_image):
-    # TODO: implementation it
-    return normalized_column, int(average_column)
-```
-- Implement the function
-    - The input is the binary image as a np.array
-    - Goal: this function main objective is to return the center of mass of the image (roughly the middle of the middle of the yellow points) normalized (0 is center, negative left part of the image, positive right part of the image)
-    - Note: the 2nd term "average_column" is optional, if you don't want to calculate it simply comment out the following line in the "2_camera_pid.py" file (but you won't have a display)
-    `# utils.display_binary_image(display_th, binary_image, average_column)`
+## Overview
+
+This repository contains materials and code for the Self-Driving Cars course, focusing on computer vision techniques used in autonomous vehicles. The code provided includes various algorithms and simulations designed to help understand the principles behind self-driving technology.
+
+## Testing and Implementation
+
+I have tested this repository while following the course materials and have made modifications to the codebase as part of the learning process. Below is a detailed description of my activities and the changes I implemented in the computer vision section.
+
+### Steps Taken
+
+1. **Initial Setup**:
+   - I navigated to the computer vision section of the repository located at:  
+     `Self-Driving-Cars-Course/2_computer_vision`.
+
+2. **Image Thresholding**:
+   - I ran the file `1_image_threshold.py` and utilized the Python debugger to understand how the thresholding operation works. This helped me grasp how images can be processed to identify specific features, such as the road markings.
+
+3. **Webots Simulation**:
+   - I opened Webots by double-clicking the file `Self-Driving-Cars/words/city.wbt` to visualize the simulation environment for the self-driving car.
+
+4. **Camera PID Control**:
+   - I executed the `2_camera_pid.py` file as-is to ensure that everything was working correctly. Understanding the logic behind the PID (Proportional, Integral, Derivative) control was crucial for implementing effective steering strategies in the vehicle.
+
+5. **Modifying Utility Functions**:
+   - I navigated to the file `2_computer_vision/utils.py` and modified the function `calculate_normalized_average_col`. I removed the original content and prepared for implementation:
+   ```python
+   def calculate_normalized_average_col(binary_image):
+       # TODO: implementation it
+       return normalized_column, int(average_column)
